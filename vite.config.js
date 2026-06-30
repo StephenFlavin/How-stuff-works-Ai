@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// The site is published at https://stephenflavin.github.io/how-stuff-works-ai/
-// so assets must be served from that sub-path.
+// Use a relative base so assets resolve correctly no matter what sub-path the
+// site is served from (GitHub Pages project URLs are case-sensitive, e.g.
+// /How-stuff-works-Ai/). "./" sidesteps any casing/path mismatch.
 export default defineConfig({
-  base: "/how-stuff-works-ai/",
+  base: "./",
   plugins: [react()],
 });

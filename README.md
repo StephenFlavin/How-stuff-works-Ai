@@ -4,7 +4,7 @@
 words into vectors, mix them with attention, stack them through transformer
 blocks, and generate text one token at a time.
 
-🔗 **Live site:** https://stephenflavin.github.io/how-stuff-works-ai/
+🔗 **Live site:** https://stephenflavin.github.io/How-stuff-works-Ai/
 
 ## Tech
 
@@ -29,6 +29,6 @@ the site and publishes `dist/` to GitHub Pages.
 **One-time setup:** in the repository **Settings → Pages**, set **Source** to
 **GitHub Actions**. After that, every push to `main` redeploys automatically.
 
-> The Vite `base` is set to `/how-stuff-works-ai/` in
-> [`vite.config.js`](vite.config.js) to match the project-pages URL path. If you
-> rename the repository, update that value.
+> The Vite `base` is set to `"./"` (relative) in
+> [`vite.config.js`](vite.config.js), so assets resolve correctly under the
+> case-sensitive project-pages path regardless of the repo name's casing.
